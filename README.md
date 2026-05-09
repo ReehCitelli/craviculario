@@ -2,6 +2,8 @@
 
 Sistema de gerenciamento de chaves desenvolvido com **Python** e **Tkinter**. Permite controlar a retirada e devolução de chaves, registrar eventos e gerar relatórios — tudo com autenticação de usuário para rastreabilidade completa.
 
+Projeto desenvolvido para uso interno com foco em praticidade e rastreabilidade no controle físico de chaves.
+
 ---
 
 ## ✨ Funcionalidades
@@ -9,14 +11,14 @@ Sistema de gerenciamento de chaves desenvolvido com **Python** e **Tkinter**. Pe
 - **Login de usuário** — acesso restrito a usuários autorizados, garantindo rastreabilidade de quem interagiu com cada chave
 - **Gerenciamento de chaves** — registra retirada e devolução, exibindo responsável e horário
 - **Histórico de eventos** — todos os eventos ficam registrados para consulta e auditoria
-- **Geração de relatórios** — relatórios detalhados de retiradas e devoluções
+- **Geração de relatórios** — relatórios detalhados de retiradas e devoluções com identificação do operador
 - **Reset de estado** — redefine todas as chaves para disponível quando necessário
 
 ---
 
 ## 🗄️ Banco de Dados
 
-O sistema utiliza **SQLite** para armazenar as informações de chaves e eventos. O banco de dados (`chaves.db` / `keys.db`) é criado automaticamente na primeira execução — nenhuma configuração manual é necessária.
+O sistema utiliza **SQLite** para armazenar as informações de chaves e eventos. O banco de dados (`chaves.db`) é criado automaticamente na primeira execução — nenhuma configuração manual é necessária.
 
 ---
 
@@ -33,8 +35,8 @@ sudo apt-get install python3-tk
 **2. Clone o repositório**
 
 ```bash
-git clone https://github.com/ReehCitelli/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/ReehCitelli/craviculario.git
+cd craviculario
 ```
 
 **3. Execute o programa**
@@ -45,14 +47,23 @@ python chaves.py
 
 **4. Faça login**
 
-Use um dos usuários cadastrados para acessar o sistema e começar a gerenciar as chaves pela interface gráfica.
+Use um dos usuários cadastrados para acessar o sistema. A senha padrão é igual ao nome do usuário.
+
+| Usuário | Senha |
+|---|---|
+| Usuario1 | Usuario1 |
+| Usuario2 | Usuario2 |
+| Usuario3 | Usuario3 |
+| Usuario4 | Usuario4 |
+
+> Para personalizar os usuários, edite a variável `USUARIOS_AUTORIZADOS` no arquivo `chaves.py`.
 
 ---
 
 ## 📁 Estrutura do Projeto
 
 ```
-📦 quadro-de-chaves
+📦 craviculario
  ┣ 📄 chaves.py        ← script principal
  ┣ 📄 chaves.db        ← banco de dados SQLite (gerado automaticamente)
  ┗ 📄 README.md
@@ -63,15 +74,15 @@ Use um dos usuários cadastrados para acessar o sistema e começar a gerenciar a
 ## 🛠️ Tecnologias
 
 - Python 3
-- Tkinter — interface gráfica
+- Tkinter — interface gráfica desktop
 - SQLite — banco de dados local
 
 ---
 
 ## 📝 Observação
 
-Este projeto foi desenvolvido para uso interno, com foco em praticidade e rastreabilidade no controle físico de chaves. Livre para uso e modificação conforme necessidade.
+Os usuários e funcionalidades do sistema podem ser facilmente adaptados para outras necessidades de controle de acesso a itens físicos.
 
 ---
 
-> Desenvolvido por [@ReehCitelli](https://github.com/ReehCitelli) com assistência da IA · Jornada de transição para Ciência de Dados 🚀
+> Desenvolvido por [@ReehCitelli](https://github.com/ReehCitelli) · Jornada de transição para Ciência de Dados 🚀
